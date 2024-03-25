@@ -45,3 +45,7 @@ jobs:
       - name: Run unit tests
         run: ansible-test units --venv
         working-directory: ansible_collections/ansible/eda
+
+      - name: Run integration tests
+        run: ansible-test integration
+        working-directory: ansible_collections/ansible/eda
