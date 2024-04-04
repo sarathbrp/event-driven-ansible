@@ -54,8 +54,8 @@ class EDAControllerModule(AnsibleModule):
         "request_timeout": "request_timeout",
     }
     host = "127.0.0.1:8000"
-    username = "awxadmin"
-    password = "awxadmin"
+    username = None
+    password = None
     verify_ssl = False
     request_timeout = 10
     version_checked = False
