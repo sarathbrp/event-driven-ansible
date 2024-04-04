@@ -53,10 +53,10 @@ class EDAControllerModule(AnsibleModule):
         "verify_ssl": "validate_certs",
         "request_timeout": "request_timeout",
     }
-    host = "127.0.0.1:8000"
+    host = "127.0.0.1:8443"
     username = None
     password = None
-    verify_ssl = False
+    verify_ssl = True
     request_timeout = 10
     version_checked = False
     error_callback = None
@@ -92,8 +92,8 @@ class EDAControllerModule(AnsibleModule):
                 setattr(self, short_param, direct_value)
 
         # Perform some basic validation
-        if not re.match("^http{0,1}://", self.host):
-            self.host = "http://{0}".format(self.host)
+        if not re.match("^https{0,1}://", self.host):
+            self.host = "https://{0}".format(self.host)
 
         # Try to parse the hostname as a url
         try:
