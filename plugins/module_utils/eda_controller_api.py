@@ -92,8 +92,8 @@ class EDAControllerModule(AnsibleModule):
                 setattr(self, short_param, direct_value)
 
         # Perform some basic validation
-        if not re.match("^https{0,1}://", self.host):
-            self.host = "https://{0}".format(self.host)
+        if not re.match("^http{0,1}://", self.host):
+            self.host = "http://{0}".format(self.host)
 
         # Try to parse the hostname as a url
         try:
