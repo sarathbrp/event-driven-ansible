@@ -56,7 +56,7 @@ class EDAControllerModule(AnsibleModule):
     host = "127.0.0.1"
     username = None
     password = None
-    verify_ssl = False
+    verify_ssl = True
     request_timeout = 10
     version_checked = False
     error_callback = None
