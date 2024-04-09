@@ -55,7 +55,7 @@ class EDAControllerModule(AnsibleModule):
     }
     host = "127.0.0.1:8443"
     username = "admin"
-    password = None
+    password = "testpass"
     verify_ssl = False
     request_timeout = 10
     version_checked = False
