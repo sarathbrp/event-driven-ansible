@@ -54,7 +54,7 @@ class EDAControllerModule(AnsibleModule):
         "request_timeout": "request_timeout",
     }
     host = "127.0.0.1:8443"
-    username = admin
+    username = "admin"
     password = None
     verify_ssl = True
     request_timeout = 10
