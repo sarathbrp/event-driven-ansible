@@ -53,10 +53,10 @@ class EDAControllerModule(AnsibleModule):
         "verify_ssl": "validate_certs",
         "request_timeout": "request_timeout",
     }
-    host = "127.0.0.1:8443"
-    username = "admin"
-    password = "testpass"
-    verify_ssl = False
+    host = "127.0.0.1"
+    username = None
+    password = None
+    verify_ssl = True
     request_timeout = 10
     version_checked = False
     error_callback = None
